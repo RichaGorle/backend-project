@@ -8,3 +8,6 @@ Packages
 5.prettier
 6.cookies-parser
 7.cors
+8.mongoose-aggregate-paginate-v2
+9.bcrypt
+10.jsonwebtoken
