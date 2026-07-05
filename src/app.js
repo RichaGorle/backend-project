@@ -28,4 +28,11 @@ app.use(express.static('public')); // Serve static files from the 'public' direc
 
 app.use(cookieParser()); // Parse Cookie header and populate req.cookies with an object keyed by the cookie names
 
+//routes
+import userRouter from "./routes/user.routes.js";
+
+
+//rotes declaration
+app.use("/api/v1/users",userRouter)
+
 export {app}

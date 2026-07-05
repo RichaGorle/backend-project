@@ -11,3 +11,5 @@ Packages
 8.mongoose-aggregate-paginate-v2
 9.bcrypt
 10.jsonwebtoken
+11.multer
+12.cloudinary
