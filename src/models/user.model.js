@@ -1,4 +1,6 @@
 import mongoose, {Schema} from "mongoose";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const userSchema = new Schema(
     {
@@ -50,11 +52,10 @@ const userSchema = new Schema(
    }
 )
    
-userSchema.pre("save", async function(next){
-    if(!this.isModified("password")) return next();
+userSchema.pre("save", async function(){
+    if(!this.isModified("password")) return;
 
     this.password = await bcrypt.hash(this.password,10)
-    next()
   })
 
   //custom method to compare password(INJECTING A METHOD INTO THE USER MODEL)
